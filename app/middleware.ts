@@ -1,4 +1,4 @@
-import { clerkMiddleware, ClerkProvider } from '@clerk/nextjs/server';
+import { clerkMiddleware } from '@clerk/nextjs/server';
 
 export default clerkMiddleware();
 
@@ -10,9 +10,3 @@ export const config = {
     '/(api|trpc)(.*)',
   ],
 };
-
-<ClerkProvider
-  publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}
->
-  {/* ... */}
-</ClerkProvider>
