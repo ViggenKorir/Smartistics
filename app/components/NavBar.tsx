@@ -3,14 +3,14 @@ import { useState, useEffect } from "react";
 import {
   ClerkProvider,
   SignInButton,
-  SignUpButton,
+  // SignUpButton,
   SignedIn,
   SignedOut,
   UserButton,
 } from '@clerk/nextjs';
-import { Inter } from 'next/font/google';
+// import { Inter } from 'next/font/google';
 
-const inter = Inter({ subsets: ['latin'] });
+// const inter = Inter({ subsets: ['latin'] });
 
 const NavBar = () => {
   const [shadow, setShadow] = useState(false);
