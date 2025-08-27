@@ -44,12 +44,12 @@ const Services = () => (
       At our digital marketing agency, we offer a range of services to help businesses grow and succeed online. These services include:
     </p>
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-      {/* {services.map((service, idx) => (
+      {services.map((service, idx) => (
         <div key={service.title} className={`rounded-xl p-6 border ${service.highlight ? 'bg-white border-lime-500 border-2' : 'bg-black text-white'}`}>
           <h3 className={`font-bold mb-2 ${service.highlight ? 'text-lime-500' : ''}`}>{service.title}</h3>
           <a href="#" className="underline text-sm">{service.description}</a>
         </div>
-      ))} */}
+      ))}
     </div>
     </div>
   </section>
