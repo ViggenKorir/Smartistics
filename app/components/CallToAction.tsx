@@ -4,7 +4,7 @@ import React from "react";
 const CallToAction = () => (
   <section className="py-10 px-8 bg-gray-100 rounded-xl my-8 text-center grid grid-cols-1 md:grid-cols-2 gap-6">
     <div className="flex flex-col justify-center">
-      <h2 className="text-xl font-bold mb-2">Let's make things happen</h2>
+      <h2 className="text-xl font-bold mb-2">Let&apos;s make things happen</h2>
       <p className="mb-4 text-gray-700 max-w-xl mx-auto">
         Contact us today to learn more about how our digital marketing services
         can help your business grow and succeed online.
