@@ -11,20 +11,18 @@ const CallToAction = () => (
       </p>
       <button
         style={{ margin: "0 auto" }}
-        className="bg-black text-white px-6  py-2 w-100 rounded-full font-medium hover:bg-gray-800"
+        
+        className="bg-black text-white px-6  py-2 w-auto rounded-full font-medium hover:bg-gray-800"
       >
         Get your free proposal
       </button>
     </div>
     <div>
      <div className="flex justify-center items-center bg-transparent">
-    <video
-      src="https://www.coupler.io/images/FIN-constant-bitrate-1MB-30fps.webm"
-      autoPlay
-      loop
-      muted
-      playsInline
-      className="mx-auto rounded-2xl shadow-xl w-full max-w-lg h-80 object-cover bg-blend-overlay"
+    <img
+      src="https://res.cloudinary.com/dgu9ietkl/image/upload/v1756388889/effectiveness-of-social-media-platforms_xyfgef.webp"
+      alt="Social Media Platforms performance"
+      className="mx-auto rounded-2xl shadow-xl w-full max-w-lg h-auto object-cover bg-blend-overlay"
       style={{ background: "rgba(255,255,255,0.05)" }}
     />
   </div>

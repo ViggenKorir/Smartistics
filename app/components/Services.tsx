@@ -3,7 +3,7 @@ import React from "react";
 
 const services = [
   {
-    title: "Search engine optimization",
+    title: "AI Search engine optimization & AI Integration",
     description: "Learn more",
     highlight: true,
   },
@@ -27,17 +27,15 @@ const services = [
 const Services = () => (
   <section className="py-12 px-8 grid grid-cols-1 md:grid-cols-2 gap-6">
      <div className="flex justify-center items-center bg-transparent">
-    <video
-      src="https://www.coupler.io/images/FIN-constant-bitrate-1MB-30fps.webm"
-      autoPlay
-      loop
-      muted
-      playsInline
-      className="mx-auto rounded-2xl shadow-xl w-full max-w-lg h-80 object-cover bg-blend-overlay"
+    <img
+      src="https://cdn.prod.website-files.com/64dc619021257128d0687cce/6581b9cd835803fe27ce3ad3_social-media-6363633_1920-p-1080.webp"
+      className="mx-auto rounded-2xl shadow-xl w-full max-w-lg h-auto object-cover bg-blend-overlay"
       style={{ background: "rgba(255,255,255,0.05)" }}
+      alt="Digital Marketing Services: img source-highperformr"
+      title="Digital Marketing Services: img source-highperformr"
     />
+    
   </div>
-
     <div>
     <h2 className="text-xl font-bold mb-2 text-lime-500">Services</h2>
     <p className="mb-8 text-gray-700 max-w-xl">

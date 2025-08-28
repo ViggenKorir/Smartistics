@@ -6,24 +6,22 @@ import CaseStudy from "./components/CaseStudy";
 import Hero from "./components/Hero";
 import QuickLinks from "./components/QuickLinks";
 import Services from "./components/Services";
+import Mailing from "./components/Mailing";
 import Footer from "./components/Footer";
 
 export default function Home() {
   return (
     <>
-      <div className="  justify-items-center  ">
+      <div className="justify-items-center">
         <NavBar />
         <Hero />
-        {/* <Header /> */}
         <QuickLinks />
         <Services />
         <CallToAction />
         <CaseStudy />
-</div>
-        
-      {/* </div> */}
+      </div>
+      <Mailing />
       <Footer />
-      {/* <Dashboard /> */}
     </>
   );
 }
