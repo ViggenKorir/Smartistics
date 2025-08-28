@@ -1,12 +1,13 @@
 "use client";
 import { useState, useEffect } from "react";
+import Link from "next/link"; // ✅ import Link
 import {
   ClerkProvider,
   SignInButton,
   SignedIn,
   SignedOut,
   UserButton,
-} from '@clerk/nextjs';
+} from "@clerk/nextjs";
 
 const NavBar = () => {
   const [shadow, setShadow] = useState(false);
@@ -31,9 +32,10 @@ const NavBar = () => {
       `}
     >
       <div className="container mx-auto flex justify-between items-center">
-        <a href="/" className="text-2xl font-bold text-black mr-25">
+        <Link href="/" className="text-2xl font-bold text-black mr-25">
           Smartistics
-        </a>
+        </Link>
+
         {/* Burger menu button */}
         <button
           className="lg:hidden flex flex-col justify-center items-center w-10 h-10"
@@ -56,60 +58,63 @@ const NavBar = () => {
             }`}
           />
         </button>
+
         {/* Desktop menu */}
         <div className="hidden lg:flex gap-8">
-          <a href="/" className="text-black hover:underline hover:animate-bounce h-8.5">
+          <Link href="/" className="text-black hover:underline hover:animate-bounce h-8.5">
             Home
-          </a>
-          <a href="/dashboard" className="text-black hover:underline hover:animate-bounce h-8.5">
+          </Link>
+          <Link href="/dashboard" className="text-black hover:underline hover:animate-bounce h-8.5">
             Dashboard
-          </a>
-          <a href="*" className="text-black hover:underline hover:animate-bounce h-8.5">
+          </Link>
+          <Link href="/products" className="text-black hover:underline hover:animate-bounce h-8.5">
             Our Products
-          </a>
-          <a href="/about" className="text-black hover:underline hover:animate-bounce h-8.5">
+          </Link>
+          <Link href="/about" className="text-black hover:underline hover:animate-bounce h-8.5">
             About Us
-          </a>
-          <a href="*" className="text-black hover:underline hover:animate-bounce h-8.5">
+          </Link>
+          <Link href="/contact" className="text-black hover:underline hover:animate-bounce h-8.5">
             Contact Us
-          </a>
-          <a href="*" className="text-black hover:underline hover:animate-bounce h-8.5">
+          </Link>
+          <Link href="/pricing" className="text-black hover:underline hover:animate-bounce h-8.5">
             Pricing
-          </a>
+          </Link>
         </div>
-<div className="hidden lg:flex ml-25">
-        {/* Authentication buttons */}
-        <ClerkProvider>
-          <SignedOut>
-            <SignInButton />
-          </SignedOut>
-          <SignedIn>
-            <UserButton />
-          </SignedIn>
-        </ClerkProvider>
+
+        <div className="hidden lg:flex ml-25">
+          {/* Authentication buttons */}
+          <ClerkProvider>
+            <SignedOut>
+              <SignInButton />
+            </SignedOut>
+            <SignedIn>
+              <UserButton />
+            </SignedIn>
+          </ClerkProvider>
         </div>
       </div>
+
       {/* Mobile menu */}
       {menuOpen && (
         <div className="lg:hidden mt-4 rounded-2xl shadow-lg bg-white py-4 px-6 flex flex-col gap-4 absolute left-0 right-0 mx-4 top-full z-20">
-          <a href="/" className="text-black hover:underline">
+          <Link href="/" className="text-black hover:underline">
             Home
-          </a>
-          <a href="/dashboard" className="text-black hover:underline">
+          </Link>
+          <Link href="/dashboard" className="text-black hover:underline">
             Dashboard
-          </a>
-          <a href="/about" className="text-black hover:underline">
+          </Link>
+          <Link href="/products" className="text-black hover:underline">
             Our Products
-          </a>
-          <a href="/about" className="text-black hover:underline">
+          </Link>
+          <Link href="/about" className="text-black hover:underline">
             About Us
-          </a>
-          <a href="*" className="text-black hover:underline">
+          </Link>
+          <Link href="/contact" className="text-black hover:underline">
             Contact Us
-          </a>
-          <a href="*" className="text-black hover:underline">
+          </Link>
+          <Link href="/pricing" className="text-black hover:underline">
             Pricing
-          </a>
+          </Link>
         </div>
       )}
     </nav>
