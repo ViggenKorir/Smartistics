@@ -4,6 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
+    "dev:web": "next dev --turbopack",
+    "dev:py": "cd services/attribution-py && uvicorn main:app --host 0.0.0.0 --port 8001",
+    "dev:infra": "docker compose -f infra/docker/docker-compose.yml up -d",
     "build": "next build --turbopack",
     "start": "next start",
     "lint": "eslint",

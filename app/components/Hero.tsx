@@ -12,11 +12,11 @@ const Hero = () => {
           <h1 className="text-6xl font-extrabold mb-0">
              Cut the Guesswork. </h1>
           
-          <h1 className="text-4xl font-bold mb-6 mt-0.5">
+          <span><h1 className="text-4xl font-bold mb-6">
             <br /> Discover which platforms actually bring customers to your
             business
+          </h1></span>
          
-          </h1>
           <p className="mb-8 text-gray-700 max-w-xl mx-auto">
             Get smart advertising analytics from a platform built
             specifically for your business. Track ROI across Facebook,
