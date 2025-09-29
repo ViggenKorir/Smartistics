@@ -1,0 +1,9 @@
+Pulse Name,Owner,Status,Priority,Timeline Start,Timeline End,Category,Notes
+Market Research & Requirement Gathering,Founder,Not Started,High,2025-09-01,2025-09-30,Research,"Focus on SMBs in Kenya, map competitors and key customer pain points."
+Backend Setup (Django/Flask),Founder,Not Started,High,2025-10-01,2025-10-31,Backend,"Set up authentication, database schema, and APIs for analytics ingestion."
+Frontend Integration (Next.js),Founder,Not Started,High,2025-10-15,2025-11-15,Frontend,Integrate backend APIs with existing Next.js frontend.
+AI/ML MVP for Social Media Insights,Founder,Not Started,High,2025-11-01,2025-12-15,AI/ML,"Build sentiment analysis, trend detection, and reporting engine."
+Automation Agents (IA Assistants),Founder,Not Started,Medium,2026-01-01,2026-02-15,Automation,Develop AI agents for automated reporting and recommendations.
+Scalability & Cloud Optimization,Founder,Not Started,Medium,2026-02-15,2026-03-15,Infrastructure,"Set up distributed processing, caching, and optimize for multi-country scale."
+Beta Testing with SMBs,Founder,Not Started,High,2026-03-15,2026-04-15,Testing,"Run closed beta with SMBs in Kenya, collect feedback, iterate."
+Launch & Marketing Campaign,Founder,Not Started,High,2026-05-01,2026-06-01,Launch,"Official product launch in Kenya, with marketing push targeting SMBs."

@@ -28,7 +28,7 @@ const Mailing = () => {
     }
     if (
       !/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(
-        email
+        email,
       )
     ) {
       setError("Invalid email address");
@@ -60,11 +60,11 @@ const Mailing = () => {
   };
 
   return (
-    <div className="flex flex-col bg-gray-50 h-120 w-full mt-10 mb-0 rounded-3xl shadow-lg">
+    <div className="flex flex-col bg-gray-50 h-auto w-full mb-0 rounded-3xl shadow-lg">
       <main className="flex flex-1 flex-col items-center justify-center px-4">
         <form
           onSubmit={handleSubmit}
-          className="w-full max-w-md bg-white shadow-lg rounded-3xl p-10 flex flex-col items-center"
+          className="w-full max-w-md bg-white shadow-lg rounded-3xl p-10 flex flex-col items-center  mt-10.5 mb-10.5"
         >
           <h2 className="text-5xl font-extrabold mb-4 text-center animate-bounce">
             Join our waitlist
@@ -79,51 +79,60 @@ const Mailing = () => {
             <p className="text-green-500 mb-2">Thank you for subscribing!</p>
           )}
 
-          {/* Name fields */}
-          <div className="flex flex-col sm:flex-row gap-2 w-full mb-3 justify-center">
-            <input
-              type="text"
-              value={firstName}
-              onChange={(e) => setFirstName(e.target.value)}
-              placeholder="First name or business name *"
-              className="flex-1 bg-gray-100 text-gray-800 rounded-full outline-none px-4 py-2 focus:ring-2 focus:ring-green-700 transition-all mr-0"
-              aria-label="First name or business name"
-              style={{ maxWidth: "200px" }}
-            />
-            <input
-              type="text"
-              value={lastName}
-              onChange={(e) => setLastName(e.target.value)}
-              placeholder="Last name (optional)"
-              className="flex-1 bg-gray-100 text-gray-800 rounded-full outline-none px-4 py-2 focus:ring-2 focus:ring-green-700 transition-all"
-              aria-label="Last name"
-              style={{ maxWidth: "200px" }}
-            />
+          <div className=" bg-gray-100 rounded-3xl py-2 px-1.5 mb-3.5 text-center">
+            {/* Name fields */}
+            <div className="sm:flex-row gap-2 w-full mb-3 justify-center">
+              <input
+                type="text"
+                value={firstName}
+                onChange={(e) => setFirstName(e.target.value)}
+                placeholder="First Name *"
+                className="w-full flex-1 bg-white text-gray-800 rounded-tl-2xl rounded-tr-2xl outline-none px-4 py-2 focus:ring-2 focus:ring-green-700 text-center transition-all mb-1.5"
+                aria-label="First name"
+                style={{ maxWidth: "500px" }}
+              />
+              <input
+                type="text"
+                value={lastName}
+                onChange={(e) => setLastName(e.target.value)}
+                placeholder="Last name "
+                className="w-full flex-1 bg-white text-gray-800 outline-none px-4 py-2 focus:ring-2 focus:ring-green-700 text-center transition-all mb-1.5"
+                aria-label="Last name"
+                style={{ maxWidth: "500px" }}
+              />
+
+              {/* Email + Button */}
+              {/*<div className="w-full flex flex-col sm:flex-row items-stretch mb-1">*/}
+              <input
+                // type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Enter your email address *"
+                className="w-full flex-grow bg-white text-gray-800 rounded-bl-2xl rounded-br-2xl outline-none px-4 py-2 focus:ring-2 focus:ring-green-700 text-center transition-all"
+                aria-label="Email address"
+                style={{ maxWidth: "500px" }}
+              />
+            </div>
           </div>
 
-          {/* Email + Button */}
-          <div className="w-full flex flex-col sm:flex-row items-stretch gap-2 bg-gray-100 rounded-full px-2 py-2 mb-2">
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="Enter your email address *"
-              className="flex-grow bg-gray-100 text-gray-800 rounded-full outline-none px-4 py-2 focus:ring-2 focus:ring-green-700 transition-all"
-              aria-label="Email address"
-              style={{ maxWidth: "300px" }}
-            />
-            <button
-              type="submit"
-              disabled={loading}
-              className={`w-full sm:w-auto px-5 py-2 font-extrabold rounded-full shadow-md transition-all ${
-                loading
-                  ? "bg-gray-400 cursor-not-allowed"
-                  : "bg-gradient-to-r from-green-800 to-green-600 text-white hover:from-green-900 hover:to-green-700"
-              }`}
-            >
-              {loading ? "Processing..." : "Subscribe"}
-            </button>
-          </div>
+          <button
+            type="submit"
+            disabled={loading}
+            className={`w-full sm:w-full px-5 py-2 font-extrabold rounded-full shadow-md transition-all ${
+              loading
+                ? "bg-gray-400 cursor-not-allowed"
+                : "bg-gradient-to-r from-green-800 to-green-600 text-white hover:from-green-900 hover:to-green-700"
+            }`}
+          >
+            {loading ? "Processing..." : "Subscribe"}
+          </button>
+
+          <a
+            href="/subscription/upgrade"
+            className="mt-3 text-blue-500 hover:pointer-events-auto"
+          >
+            Onboard a business instead
+          </a>
 
           {/* Loading Bar */}
           {loading && (
@@ -138,4 +147,3 @@ const Mailing = () => {
 };
 
 export default Mailing;
-

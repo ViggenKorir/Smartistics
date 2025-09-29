@@ -1,0 +1,24 @@
+Phase,Task,Timeline,Owner
+Foundation (Month 1–2),"Set up GitHub repo, CI/CD pipelines, and Docker-based dev environment",Month 1,Lead Dev (You)
+Foundation (Month 1–2),"Define data models for Users, Roles, Businesses, Subscriptions, Social Accounts",Month 1,Lead Dev
+Foundation (Month 1–2),"Implement Django backend (Auth, APIs, RBAC)",Month 1–2,Lead Dev
+Foundation (Month 1–2),Integrate PostgreSQL + Redis,Month 1–2,Lead Dev
+Foundation (Month 1–2),Deploy staging infra on Railway/Render + Vercel (frontend),Month 2,Lead Dev
+Data Ingestion (Month 2–3),"Integrate APIs (Facebook Graph, Twitter/X, LinkedIn, Instagram, TikTok)",Month 2–3,Lead Dev
+Data Ingestion (Month 2–3),Build ETL pipeline (Celery workers + Redis),Month 2–3,Lead Dev
+Data Ingestion (Month 2–3),Store raw & cleaned data in PostgreSQL,Month 3,Lead Dev
+Analytics & AI Layer (Month 3–5),Implement dashboards (Next.js + Recharts/Plotly),Month 3–4,Lead Dev
+Analytics & AI Layer (Month 3–5),Sentiment Analysis NLP (Transformers),Month 4,Lead Dev
+Analytics & AI Layer (Month 3–5),"Recommendation engine (best posting times, content type)",Month 5,Lead Dev
+Analytics & AI Layer (Month 3–5),"Automated reports (PDF, email, Slack integration)",Month 5,Lead Dev
+AI Agents & Automation (Month 5–7),"Develop AI Copilot for marketers (chat interface, insights Q&A)",Month 5–6,Lead Dev
+AI Agents & Automation (Month 5–7),Integrate LangChain or LlamaIndex for retrieval-augmented generation,Month 6,Lead Dev
+AI Agents & Automation (Month 5–7),"Set up task automation agents (post-scheduling, competitor monitoring)",Month 6–7,Lead Dev
+Scaling & Optimization (Month 7–9),"Migrate infra to AWS/GCP/Azure (K8s, managed Postgres, S3)",Month 7,Infra Support
+Scaling & Optimization (Month 7–9),Implement Kafka/Spark for real-time streaming analytics,Month 8,Infra Support
+Scaling & Optimization (Month 7–9),Add caching (Redis/Cloudflare) for speed,Month 8–9,Lead Dev
+Scaling & Optimization (Month 7–9),Run performance load testing,Month 9,Lead Dev
+Launch & Expansion (Month 9–12),Pilot in Kenya with 20–50 SMBs,Month 9–10,Product Lead
+Launch & Expansion (Month 9–12),"Gather feedback, improve UX/UI",Month 10,Lead Dev
+Launch & Expansion (Month 9–12),"Prepare pricing tiers & billing (Stripe, M-Pesa)",Month 10–11,Lead Dev
+Launch & Expansion (Month 9–12),"Expand to East Africa (Uganda, Tanzania)",Month 12,Product Lead

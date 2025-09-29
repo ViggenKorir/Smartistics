@@ -60,12 +60,12 @@ Smartistics is a SaaS analytics and optimization platform that unifies ad data f
 ## Tech Stack
 
 * **Frontend:** Next.js (App Router) + React + TypeScript, TailwindCSS, Recharts
-* **Backend:** Node.js (NestJS or Express), TypeScript, Prisma ORM
+* **Backend:** Node.js (NestJS), TypeScript, Prisma ORM
 * **DB/Cache:** PostgreSQL, Redis
 * **Automation:** n8n (Docker)
 * **Auth:** NextAuth (OAuth/JWT) or custom OAuth2 for ad APIs
-* **Payments:** Stripe Billing
-* **Observability:** Sentry (errors), Prometheus + Grafana (metrics)
+* **Payments:** Mpesa Billing for local & Stripe for global payments
+* **Observability:** Sentry (errors), Prometheus + Grafana (metrics) & Microsoft Clarity
 
 ---
 
@@ -446,3 +446,38 @@ model Recommendation {
 ## License
 
 Choose your license (MIT/Apache‑2.0/Proprietary). Update `LICENSE` accordingly.
+
+---
+
+## Mock API (json-server)
+
+This project uses a mock API during development, served from `db.json` via `json-server`. The app never imports `db.json` directly; data is fetched over HTTP to simulate a real backend.
+
+### Install and run
+
+```bash
+npm install
+npm run json-server
+```
+
+This serves `db.json` at `http://localhost:3001`.
+
+In a separate terminal, start the app:
+
+```bash
+npm run dev
+```
+
+### Endpoints
+
+- `GET http://localhost:3001/users`
+- `GET http://localhost:3001/subscriptionScenarios`
+- `GET http://localhost:3001/charts?id=<line|bar|pie|area|scatter|composed>`
+
+### Behavior when the API is down
+
+- The UI remains stable with loading/error states.
+- Auth falls back to unauthenticated; subscription data becomes `null`.
+- Charts display an inline error within the chart card.
+
+This mirrors a real API integration path; switching to production later is as simple as swapping the base URL or routing calls through your service layer.

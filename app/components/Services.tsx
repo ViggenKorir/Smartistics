@@ -5,22 +5,27 @@ import Image from "next/image";
 const services = [
   {
     title: "AI Search engine optimization & AI Integration",
-    description: "Learn more",
+    description:
+      "Optimize your website's search engine rankings and integrate AI-powered features to enhance user experience.",
+    link: "Learn more",
     highlight: true,
   },
   {
-    title: "Pay per click advertising",
-    description: "Learn more",
+    title: "ROI Tracking",
+    description: "Track your marketing campaigns' return on investment.",
+    link: "Learn more",
     highlight: false,
   },
   {
     title: "Social media marketing",
-    description: "Learn more",
+    description: "Grow your brand's presence on social media platforms.",
+    link: "Learn more",
     highlight: false,
   },
   {
     title: "E-mail marketing",
-    description: "Learn more",
+    description: "Build and engage with your email list.",
+    link: "Learn more",
     highlight: true,
   },
 ];
@@ -52,20 +57,26 @@ const Services = () => (
             key={service.title}
             className={`rounded-xl p-6 border ${
               service.highlight
-                ? "bg-white border-lime-500 border-2"
+                ? "bg-white border-lime-700 border-2"
                 : "bg-black text-white"
             }`}
           >
             <h3
               className={`font-bold mb-2 ${
-                service.highlight ? "text-lime-500" : ""
+                service.highlight ? "text-black" : ""
               }`}
             >
               {service.title}
             </h3>
-            <a href="#" className="underline text-sm">
+            <a href="#" className="text-sm">
               {service.description}
             </a>
+            <br />
+            <h4>
+              <a href="#" className="underline text-sm mt-1.5">
+                {service.link}
+              </a>
+            </h4>
           </div>
         ))}
       </div>

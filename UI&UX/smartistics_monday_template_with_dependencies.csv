@@ -1,0 +1,11 @@
+Pulse Name,Owner,Status,Timeline Start,Timeline End,Priority,Notes,Dependencies
+Market Research & Requirements Gathering,Founder/Lead,Planned,2025-09-01,2025-09-21,High,Initial groundwork for Kenya SMBs,
+MVP Frontend (Next.js),Lead Dev,In Progress,2025-09-10,2025-10-15,High,"UI/UX for dashboard, charts, onboarding",Market Research & Requirements Gathering
+MVP Backend (Django),Lead Dev,Planned,2025-09-15,2025-10-20,High,"Core API, authentication, user roles",Market Research & Requirements Gathering
+Data Pipeline Setup (ETL),Backend Dev,Planned,2025-10-05,2025-11-01,High,"Ingest data from social APIs (FB, X, IG, TikTok)",MVP Backend (Django)
+AI/ML Model Development,Data Scientist,Planned,2025-10-20,2025-12-01,High,"NLP sentiment analysis, trend detection",Data Pipeline Setup (ETL)
+AI Agent Automation (Phase 1),AI Engineer,Planned,2025-12-05,2026-01-15,Medium,Assistants for report generation & insights,AI/ML Model Development
+MVP Testing & QA,QA Lead,Planned,2025-12-20,2026-01-25,High,"Functional, performance, and usability testing",AI Agent Automation (Phase 1)
+MVP Launch (Kenya),Founder/Lead,Planned,2026-02-01,2026-02-10,High,Launch in Kenya with targeted SMB outreach,MVP Testing & QA
+Scale Infrastructure (AWS/GCP),DevOps,Planned,2026-02-15,2026-03-15,Medium,"Auto-scaling, observability, monitoring",MVP Launch (Kenya)
+Expansion to East Africa,Growth Lead,Planned,2026-04-01,2026-06-30,Medium,"Extend to Uganda, Tanzania",Scale Infrastructure (AWS/GCP)

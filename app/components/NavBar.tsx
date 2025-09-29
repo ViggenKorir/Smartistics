@@ -1,9 +1,10 @@
 "use client";
 import { useState, useEffect } from "react";
-import Link from "next/link"; // ✅ import Link
+import Link from "next/link";
 import {
   ClerkProvider,
   SignInButton,
+  SignUpButton,
   SignedIn,
   SignedOut,
   UserButton,
@@ -26,7 +27,7 @@ const NavBar = () => {
       className={`fixed top-5 z-10 rounded-full px-4 py-3 transition-all duration-500
         ${
           shadow
-            ? "bg-[rgb(255,255,255)] dark:bg-white backdrop-blur-md shadow-md border-0.5"
+            ? "bg- [rgb(255,255,255)] dark:bg-white backdrop-blur-md shadow-md border-0.5"
             : "bg-[rgb(255,255,255)] backdrop-blur-0 shadow-none"
         }
       `}
@@ -61,28 +62,46 @@ const NavBar = () => {
 
         {/* Desktop menu */}
         <div className="hidden lg:flex gap-8">
-          <Link href="/" className="text-black hover:underline hover:animate-bounce h-8.5">
+          <Link
+            href="/"
+            className="text-black hover:underline hover:animate-bounce h-8.5"
+          >
             Home
           </Link>
-          <Link href="/dashboard" className="text-black hover:underline hover:animate-bounce h-8.5">
+          <Link
+            href="/dashboard"
+            className="text-black hover:underline hover:animate-bounce h-8.5"
+          >
             Dashboard
           </Link>
-          <Link href="/products" className="text-black hover:underline hover:animate-bounce h-8.5">
+          <Link
+            href="/products"
+            className="text-black hover:underline hover:animate-bounce h-8.5"
+          >
             Our Products
           </Link>
-          <Link href="/about" className="text-black hover:underline hover:animate-bounce h-8.5">
+          <Link
+            href="/about"
+            className="text-black hover:underline hover:animate-bounce h-8.5"
+          >
             About Us
           </Link>
-          <Link href="/contact" className="text-black hover:underline hover:animate-bounce h-8.5">
+          <Link
+            href="/contact"
+            className="text-black hover:underline hover:animate-bounce h-8.5"
+          >
             Contact Us
           </Link>
-          <Link href="/pricing" className="text-black hover:underline hover:animate-bounce h-8.5">
+          <Link
+            href="/pricing"
+            className="text-black hover:underline hover:animate-bounce h-8.5"
+          >
             Pricing
           </Link>
         </div>
 
         <div className="hidden lg:flex ml-25">
-          {/* Authentication buttons */}
+          {/* Authentication buttons */}{" "}
           <ClerkProvider>
             <SignedOut>
               <SignInButton />

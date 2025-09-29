@@ -11,8 +11,9 @@ const Footer = () => (
           <a href="*" aria-label="Twitter" className="hover:text-purple-400"><svg width="20" height="20" fill="red"><circle cx="10" cy="10" r="10"/></svg>Instagram</a>
           <a href="*" aria-label="LinkedIn" className="hover:text-lime-400"><svg width="20" height="20" fill="blue"><circle cx="10" cy="10" r="10"/></svg>FaceBook</a>
           <a href="*" aria-label="Instagram" className="hover:text-lime-400"><svg width="20" height="20" fill="white"><circle cx="10" cy="10" r="10"/></svg>X</a>
-        </div>
+        </div>type="email"
       </div>
+  
       <div>
         <h4 className="font-semibold mb-2">Company</h4>
         <ul className="space-y-1 text-sm text-gray-400">
@@ -24,7 +25,7 @@ const Footer = () => (
       <div>
         <h4 className="font-semibold mb-2">Services</h4>
         <ul className="space-y-1 text-sm text-gray-400">
-          <li><a href="/about" className="hover:text-lime-400">SEO</a></li>
+          <li><a href="/about" className="hover:text-lime-400">AI SEO</a></li>
           <li><a href="*" className="hover:text-lime-400">PPC</a></li>
           <li><a href="*" className="hover:text-lime-400">Social Media</a></li>
           <li><a href="*" className="hover:text-lime-400">Email Marketing</a></li>

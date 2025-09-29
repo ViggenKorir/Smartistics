@@ -1,0 +1,264 @@
+{
+  "invoices": {
+    "current": [],
+    "history": []
+  },
+  "users": [
+    {
+      "id": "demo-admin",
+      "name": "Alice Admin",
+      "email": "admin@smartistics.demo",
+      "role": "Admin",
+      "avatar": "https://images.unsplash.com/photo-1494790108755-2616b612b5bb?w=150",
+      "createdAt": "2024-01-15T00:00:00.000Z",
+      "lastLoginAt": "2024-06-01T00:00:00.000Z"
+    },
+    {
+      "id": "demo-manager",
+      "name": "Bob Manager",
+      "email": "manager@smartistics.demo",
+      "role": "Manager",
+      "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150",
+      "createdAt": "2024-01-20T00:00:00.000Z",
+      "lastLoginAt": "2024-06-01T00:00:00.000Z"
+    },
+    {
+      "id": "demo-analyst",
+      "name": "Charlie Analyst",
+      "email": "analyst@smartistics.demo",
+      "role": "Analyst",
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150",
+      "createdAt": "2024-02-01T00:00:00.000Z",
+      "lastLoginAt": "2024-06-01T00:00:00.000Z"
+    },
+    {
+      "id": "demo-marketer",
+      "name": "Dana Marketer",
+      "email": "marketer@smartistics.demo",
+      "role": "Marketer",
+      "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150",
+      "createdAt": "2024-02-05T00:00:00.000Z",
+      "lastLoginAt": "2024-06-01T00:00:00.000Z"
+    },
+    {
+      "id": "demo-employee",
+      "name": "Eve Employee",
+      "email": "employee@smartistics.demo",
+      "role": "Employee",
+      "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150",
+      "createdAt": "2024-02-10T00:00:00.000Z",
+      "lastLoginAt": "2024-06-01T00:00:00.000Z"
+    },
+    {
+      "id": "demo-founder",
+      "name": "Frank Founder",
+      "email": "founder@smartistics.demo",
+      "role": "Founder",
+      "avatar": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150",
+      "createdAt": "2024-01-01T00:00:00.000Z",
+      "lastLoginAt": "2024-06-01T00:00:00.000Z"
+    }
+  ],
+  "subscriptionScenarios": [
+    {
+      "id": "free-active",
+      "name": "Free Plan (Active)",
+      "description": "User on free tier with active status",
+      "subscription": {
+        "status": "active",
+        "tier": "free",
+        "expiryDate": null,
+        "daysOverdue": 0,
+        "isGracePeriod": false,
+        "nextBillingDate": null,
+        "amount": 0,
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "active-plus",
+      "name": "Plus Plan (Active)",
+      "description": "User with active Plus subscription",
+      "subscription": {
+        "status": "active",
+        "tier": "plus",
+        "expiryDate": "2025-10-18T00:00:00.000Z",
+        "daysOverdue": 0,
+        "isGracePeriod": false,
+        "nextBillingDate": "2025-10-18T00:00:00.000Z",
+        "amount": 12,
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "active-premium",
+      "name": "Premium Plan (Active)",
+      "description": "User with active Premium subscription",
+      "subscription": {
+        "status": "active",
+        "tier": "premium",
+        "expiryDate": "2025-10-18T00:00:00.000Z",
+        "daysOverdue": 0,
+        "isGracePeriod": false,
+        "nextBillingDate": "2025-10-18T00:00:00.000Z",
+        "amount": 16,
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "warning-stage",
+      "name": "Warning Stage (2 days overdue)",
+      "description": "Payment due soon - visible to Admin/Manager/Founder",
+      "subscription": {
+        "status": "expired",
+        "tier": "plus",
+        "expiryDate": "2025-09-16T00:00:00.000Z",
+        "daysOverdue": 2,
+        "isGracePeriod": true,
+        "nextBillingDate": null,
+        "amount": 12,
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "error-stage-1",
+      "name": "Error Stage 1 (4 days overdue)",
+      "description": "Payment overdue - visible to Admin/Manager/Founder",
+      "subscription": {
+        "status": "expired",
+        "tier": "plus",
+        "expiryDate": "2025-09-14T00:00:00.000Z",
+        "daysOverdue": 4,
+        "isGracePeriod": true,
+        "nextBillingDate": null,
+        "amount": 12,
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "error-stage-2",
+      "name": "Error Stage 2 (6 days overdue)",
+      "description": "Payment overdue - visible to more roles",
+      "subscription": {
+        "status": "expired",
+        "tier": "plus",
+        "expiryDate": "2025-09-12T00:00:00.000Z",
+        "daysOverdue": 6,
+        "isGracePeriod": true,
+        "nextBillingDate": null,
+        "amount": 12,
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "lockout-stage",
+      "name": "Account Lockout (10 days overdue)",
+      "description": "Account locked - visible to all users",
+      "subscription": {
+        "status": "expired",
+        "tier": "premium",
+        "expiryDate": "2025-09-08T00:00:00.000Z",
+        "daysOverdue": 10,
+        "isGracePeriod": false,
+        "nextBillingDate": null,
+        "amount": 16,
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "pending-payment",
+      "name": "Pending Payment",
+      "description": "Payment processing in progress",
+      "subscription": {
+        "status": "pending",
+        "tier": "premium",
+        "expiryDate": "2025-09-23T00:00:00.000Z",
+        "daysOverdue": 0,
+        "isGracePeriod": false,
+        "nextBillingDate": "2025-10-28T00:00:00.000Z",
+        "amount": 16,
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "cancelled",
+      "name": "Cancelled Subscription",
+      "description": "User cancelled their subscription",
+      "subscription": {
+        "status": "cancelled",
+        "tier": "plus",
+        "expiryDate": "2025-09-17T00:00:00.000Z",
+        "daysOverdue": 1,
+        "isGracePeriod": false,
+        "nextBillingDate": null,
+        "amount": 12,
+        "currency": "USD"
+      }
+    }
+  ],
+  "charts": [
+    {
+      "id": "line",
+      "data": [
+        { "name": "Jan", "value": 45000, "secondary": 124 },
+        { "name": "Feb", "value": 52000, "secondary": 145 },
+        { "name": "Mar", "value": 48000, "secondary": 132 },
+        { "name": "Apr", "value": 61000, "secondary": 168 },
+        { "name": "May", "value": 55000, "secondary": 151 },
+        { "name": "Jun", "value": 67000, "secondary": 182 }
+      ]
+    },
+    {
+      "id": "bar",
+      "data": [
+        { "name": "Q1", "revenue": 45000, "expenses": 32000 },
+        { "name": "Q2", "revenue": 52000, "expenses": 35000 },
+        { "name": "Q3", "revenue": 48000, "expenses": 33000 },
+        { "name": "Q4", "revenue": 61000, "expenses": 38000 }
+      ]
+    },
+    {
+      "id": "pie",
+      "data": [
+        { "name": "Facebook", "value": 35, "color": "#1877F2" },
+        { "name": "Google", "value": 28, "color": "#4285F4" },
+        { "name": "Instagram", "value": 20, "color": "#E4405F" },
+        { "name": "TikTok", "value": 10, "color": "#000000" },
+        { "name": "LinkedIn", "value": 7, "color": "#0A66C2" }
+      ]
+    },
+    {
+      "id": "area",
+      "data": [
+        { "name": "Jan", "value": 45000, "goal": 50000 },
+        { "name": "Feb", "value": 52000, "goal": 55000 },
+        { "name": "Mar", "value": 48000, "goal": 50000 },
+        { "name": "Apr", "value": 61000, "goal": 60000 },
+        { "name": "May", "value": 55000, "goal": 58000 },
+        { "name": "Jun", "value": 67000, "goal": 65000 }
+      ]
+    },
+    {
+      "id": "scatter",
+      "data": [
+        { "x": 100, "y": 200, "z": 200 },
+        { "x": 120, "y": 100, "z": 260 },
+        { "x": 170, "y": 300, "z": 400 },
+        { "x": 140, "y": 250, "z": 280 },
+        { "x": 150, "y": 400, "z": 500 },
+        { "x": 110, "y": 280, "z": 200 }
+      ]
+    },
+    {
+      "id": "composed",
+      "data": [
+        { "name": "Jan", "revenue": 45000, "conversions": 124, "roi": 285 },
+        { "name": "Feb", "revenue": 52000, "conversions": 145, "roi": 310 },
+        { "name": "Mar", "revenue": 48000, "conversions": 132, "roi": 295 },
+        { "name": "Apr", "revenue": 61000, "conversions": 168, "roi": 340 }
+      ]
+    }
+  ]
+}
+
+

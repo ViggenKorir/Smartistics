@@ -7,7 +7,7 @@ export default function MailingPage() {
   return (
     <>
       <div className="items-center justify-items-center">
-        <NavBar />
+        {/*<NavBar />*/}
         <Mailing />
       </div>
       <Footer />
