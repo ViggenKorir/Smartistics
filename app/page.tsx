@@ -8,6 +8,7 @@ import QuickLinks from "./components/QuickLinks";
 import Services from "./components/Services";
 import Mailing from "./components/Mailing";
 import Footer from "./components/Footer";
+import AnalyticsDashboard from "./components/Analytics";
 
 export default function Home() {
   return (
@@ -111,6 +112,7 @@ export default function Home() {
         <CallToAction />
         <CaseStudy />
       </div>
+      <AnalyticsDashboard/>
       <Mailing />
       <Footer />
     </>
